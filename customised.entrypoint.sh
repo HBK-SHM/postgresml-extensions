@@ -38,6 +38,6 @@ export DASHBOARD_CMS_DIRECTORY=/usr/share/pgml-cms
 export SEARCH_INDEX_DIRECTORY=/var/lib/pgml-dashboard/search-index
 export ROCKET_SECRET_KEY=$(openssl rand -hex 32)
 export ROCKET_ADDRESS=0.0.0.0
-export RUST_LOG=info
-exec /usr/bin/pgml-dashboard > /dev/null 2>&1
+export RUST_LOG=debug
+#exec /usr/bin/pgml-dashboard
 trap : TERM INT; sleep infinity & wait
